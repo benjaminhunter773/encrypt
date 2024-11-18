@@ -4,34 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhailog Community Support</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <link rel="icon" href="icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Your CSS styles */
+    </style>
 </head>
 <body>
-    <h1>Loading Bhailog Community Support...</h1>
-    <div id="app"></div>
+    <header>
+        <div class="logo">
+            <img src="https://i.imgur.com/7qyk72w.jpg" alt="Bhailog Logo">
+        </div>
+        <h1>Bhailog Community Support</h1>
+        <p>Where Brotherhood Meets Action</p>
+    </header>
 
-    <script>
-        // Decrypt and render the encrypted HTML
-        async function loadEncryptedContent() {
-            try {
-                const response = await fetch('index.html.enc');
-                const encryptedContent = await response.text();
+    <main>
+        <!-- Your content here -->
+    </main>
 
-                // Decrypt the content
-                const password = 'password1'; // Hardcoded password
-                const decryptedContent = CryptoJS.AES.decrypt(encryptedContent, password).toString(CryptoJS.enc.Utf8);
-
-                if (!decryptedContent) throw new Error('Decryption failed. Check the password or encrypted file.');
-
-                // Display the decrypted HTML in the app container
-                document.getElementById('app').innerHTML = decryptedContent;
-            } catch (error) {
-                console.error('Failed to load encrypted content:', error);
-                document.getElementById('app').innerHTML = '<h1>Error loading the web app.</h1>';
-            }
-        }
-
-        loadEncryptedContent();
-    </script>
+    <footer>
+        <p>&copy; 2024 Bhailog Canada</p>
+    </footer>
 </body>
 </html>
